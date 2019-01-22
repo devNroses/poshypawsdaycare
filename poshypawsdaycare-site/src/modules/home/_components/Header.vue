@@ -53,10 +53,21 @@ ul {
 
 .contactLink {
   font-size: 12px;
+  margin-top: -10px;
   margin-left: auto;
-  padding-left: 25px;
-  padding-right: 25px;
-  margin-right: 50px;
-  background-color: transparent;
+
+  a {
+    padding: 12px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-right: 50px;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 16px;
+  
+    &:hover {
+      border: 1px solid #4EC4D1;
+    }
+  }
 }
 </style>

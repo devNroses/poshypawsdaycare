@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <HomeContainer></HomeContainer>
+    <app-home></app-home>
   </div>
 </template>
 
@@ -10,7 +10,7 @@ import HomeContainer from "@/modules/home/index.vue";
 
 @Component({
   components: {
-    HomeContainer
+    appHome: HomeContainer
   }
 })
 export default class Home extends Vue {}

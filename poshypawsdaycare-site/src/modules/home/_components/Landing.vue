@@ -1,14 +1,24 @@
 <template>
   <div>
-    <div class="app--landing"></div>
-    <div class="app--page">
+    <div class="landingPage--background"></div>
+    <div class="landingPage--container">
       <app-header></app-header>
-      <div class="app--landing_container">
+      <div class="landingPage--featureContent">
         <h1>A Haute Spa Day</h1>
         <h3>For Your Family Member</h3>
         <p>Our first priority is making sure you and your beloved animal treated to the very best service, as if you were an extended family member.</p>
       </div>
     </div>
+
+  <div class="landingPage--section">
+    <div>
+      Image Goes Here
+    </div>
+    <div>
+      text goes here
+    </div>
+  </div>
+
   </div>
 </template>
 
@@ -24,7 +34,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.app--page {
+.landingPage--container {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -34,7 +44,7 @@ export default {
   color: white;
 }
 
-.app--landing {
+.landingPage--background{
   height: 780px;
   background-image: url('~@/assets/home--image.jpg');
   background-repeat: no-repeat;
@@ -42,7 +52,7 @@ export default {
   background-size: cover;
 }
 
-.app--landing_container {
+.landingPage--featureContent{
   display: flex;
   flex-direction: column;
   padding: 60px;
@@ -56,6 +66,29 @@ export default {
   h3 {
     font-size: 36px;
     margin-top: 5px;
+  }
+
+  p{
+    width: 375px;
+    line-height: 25px;
+    margin-top: 15px;
+    font-size: 16px;
+  }
+}
+
+.landingPage--section {
+  margin: 20px auto;
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
+  flex: 1;
+
+  div{
+    width: 200px;
+    height: 200px;
+    background-color: dodgerblue;
   }
 }
 </style>
