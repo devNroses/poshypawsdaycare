@@ -12,10 +12,14 @@
 
   <div class="landingPage--section">
     <div>
-      Image Goes Here
+      <img src="@/assets/dogGrooming.jpg" alt="Poshy Paws Dog Grooming">
     </div>
     <div>
-      text goes here
+      <h2>DOG GROOMING</h2>
+      <h3>We Cater to all your dogs needs</h3>
+      <p>We are a family owned and operated business. We take tremendous 
+care to be gentle and kind with your pet while getting them completely 
+groomed to the highest standards. </p>
     </div>
   </div>
 
@@ -78,17 +82,50 @@ export default {
 
 .landingPage--section {
   margin: 20px auto;
-  border: 1px solid red;
   display: flex;
-  justify-content: flex-end;
-  padding-left: 100px;
-  padding-right: 100px;
+  justify-content:center;
+  padding-left: 150px;
+  padding-right: 150px;
   flex: 1;
+  flex-wrap: wrap;
 
-  div{
-    width: 200px;
-    height: 200px;
-    background-color: dodgerblue;
+  div {
+    width: 600px;
+    height: 345px;
+    display: inline-flex;
+    flex-direction: column;
+    margin: 15px -20px;
+
+    img{
+      width: 550px;
+      margin: 0 80px;
+    }
+  
+    h2 {
+      width: 200px;
+      font-size: 120px;
+      font-weight: bold;
+      line-height: 120px;
+      color: #EAEAEA;
+      position: absolute;
+      opacity: .5;
+      margin-left: -50px;
+    }
+    h3 { 
+      position: relative;
+      color: #4EC4D1;
+      font-size: 28px;
+      font-weight: 100px;
+      margin: 230px 0 15px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    p {
+      position: relative;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 }
 </style>
