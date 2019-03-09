@@ -39,7 +39,8 @@ module.exports = {
     '@nuxtjs/axios',
     // Doc: https://buefy.github.io/#/documentation
     'nuxt-buefy',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    'nuxt-tslint'
   ],
   /*
   ** Axios module configuration
