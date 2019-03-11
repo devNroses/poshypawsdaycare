@@ -1,0 +1,23 @@
+{
+  // See http://go.microsoft.com/fwlink/?LinkId=827846 to learn about workspace recommendations.
+  // Extension identifier format: ${publisher}.${name}. Example: vscode.csharp
+
+  // List of extensions which should be recommended for users of this workspace.
+  "recommendations": [
+    "adrianverdugo.buefy-snippet",
+    "eg2.vscode-npm-script",
+    "christian-kohler.npm-intellisense",
+    "christian-kohler.path-intellisense",
+    "esbenp.prettier-vscode",
+    "eg2.tslint",
+    "octref.vetur",
+    "hollowtree.vue-snippets",
+    "dariofuzinato.vue-peek",
+    "ducksoupdev.vue2",
+    "sdras.vue-vscode-extensionpack",
+    "sdras.vue-vscode-snippets",
+    "mubaidr.vuejs-extension-pack"
+  ],
+  // List of extensions recommended by VS Code that should not be recommended for users of this workspace.
+  "unwantedRecommendations": []
+}

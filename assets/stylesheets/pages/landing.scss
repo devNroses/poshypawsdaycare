@@ -1,0 +1,43 @@
+.navbar {
+  padding-top: 30px;
+}
+a.navbar-item,
+.navbar-link {
+  margin: 0 25px;
+}
+.container {
+  .logo {
+    width: 166px;
+    height: auto;
+    margin-right: 50px;
+    padding-top: 15px;
+  }
+  .title {
+    font-size: 65px;
+    margin-top: -90px;
+  }
+
+  .subtitle {
+    font-size: 35px;
+  }
+
+  .hero--description {
+    width: 360px;
+    line-height: 2;
+  }
+}
+
+.hero.is-info .title {
+  color: #4ec4d1;
+}
+
+.landing-page {
+  background-image: url(~assets/img/home--image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero.is-info {
+  background-color: transparent;
+}

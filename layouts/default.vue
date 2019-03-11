@@ -1,56 +1,50 @@
 <template>
   <div>
-    <nav class="navbar header has-shadow is-primary" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-          <img src="~assets/buefy.png" alt="Buefy" height="28">
-        </a>
+    <section class="hero landing-page is-info is-large">
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <nuxt-link to="/">
+                <img class="logo" src="../assets/img/poshy-paws-logo.png" alt="Logo">
+              </nuxt-link>
+              <nuxt-link to="/" class="navbar-item">HOME</nuxt-link>
+              <nuxt-link to="/about" class="navbar-item">ABOUT US</nuxt-link>
+              <nuxt-link to="/services" class="navbar-item">SERVICES</nuxt-link>
+              <span class="navbar-burger burger" data-target="navbarMenuHeroB">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+            <div id="navbarMenuHeroB" class="navbar-menu">
+              <div class="navbar-end">
+                <span class="navbar-item">
+                  <nuxt-link to="/contact" class="button is-info is-inverted">
+                    <span>Contact Us</span>
+                  </nuxt-link>
+                </span>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
 
-        <div class="navbar-burger">
-          <span/>
-          <span/>
-          <span/>
+      <div class="hero-body">
+        <div class="container">
+          <p class="title">A Haute Spa Day</p>
+          <p class="subtitle">For Your Family Member</p>
+          <p class="hero--description">
+            Our first priority is making sure you and your beloved
+            animal treated to the very best service, as if you were
+            an extended family member.
+          </p>
         </div>
       </div>
-    </nav>
-
-    <section class="main-content columns">
-      <aside class="column is-2 section">
-        <p class="menu-label is-hidden-touch">General</p>
-        <ul class="menu-list">
-          <li v-for="(item, key) of items" :key="key">
-            <nuxt-link :to="item.to" exact-active-class="is-active">
-              <b-icon :icon="item.icon"/>
-              {{ item.title }}
-            </nuxt-link>
-          </li>
-        </ul>
-      </aside>
-
-      <div class="container column is-10">
-        <nuxt/>
-      </div>
     </section>
+
+    <div class="container column is-12">
+      <nuxt/>
+    </div>
   </div>
 </template>
-
-<script>
-export default {
-  data() {
-    return {
-      items: [
-        {
-          title: "Home",
-          icon: "home",
-          to: { name: "index" }
-        },
-        {
-          title: "Inspire",
-          icon: "lightbulb",
-          to: { name: "inspire" }
-        }
-      ]
-    };
-  }
-};
-</script>

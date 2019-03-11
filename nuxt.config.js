@@ -24,7 +24,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [],
+  css: ['assets/stylesheets/main.scss'],
 
   /*
   ** Plugins to load before mounting the App
@@ -39,7 +39,8 @@ module.exports = {
     '@nuxtjs/axios',
     // Doc: https://buefy.github.io/#/documentation
     'nuxt-buefy',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    'nuxt-tslint'
   ],
   /*
   ** Axios module configuration
