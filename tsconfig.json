@@ -20,11 +20,17 @@
       "~/*": ["./*"],
       "@/*": ["./src/*"]
     },
-    "sourceMap": true
+    "sourceMap": true,
+    "strict": true,
+    "noEmit": true,
+    "types": ["@types/node"],
+    "strictPropertyInitialization": false
   },
   "include": [
     // Target our shims folder
     "./shims/*.ts",
+    "./**/*.ts",
+    "./**/*.vue",
 
     // Target our src ts / vue appropriately
     // "./src/**/*.ts",
