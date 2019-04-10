@@ -32,11 +32,21 @@
         </div>
       </div>
     </section>
+
+    <section>
+      <div class="section--content_fullwidth">
+        <services-carousel></services-carousel>
+      </div>
+    </section>
   </div>
 </template>
 
 <script>
-import Vue from 'vue'
+import ServicesCarousel from '@/features/Services/components/ServicesCarousel.vue'
 
-export default class HomePage extends Vue {}
+export default {
+  components: {
+    ServicesCarousel
+  }
+}
 </script>
