@@ -21,6 +21,11 @@
             <img src="../../../assets/img/servicess/HairTrim_dog.jpg" alt="Dog Grooming Hair Trim">
           </div>
         </slide>
+        <slide>
+          <div class="placeHolder">
+            <img src="../../../assets/img/servicess/Daycare_dog.jpg" alt="All Day Daycare">
+          </div>
+        </slide>
       </carousel>
     </div>
   </div>
@@ -33,11 +38,26 @@ export default {}
 <style lang="scss">
 .servicess--wrapper {
   width: 90%;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .placeHolder {
   width: 100%;
   height: auto;
+  margin-top: 10px;
+}
+
+.services--button {
+  text-align: center;
+  margin: 20px auto;
+  button {
+    width: 250px;
+    padding: 5px;
+    border-radius: 12px;
+    outline: none;
+    color: white;
+    background: #4ec4d1;
+    font-size: 16px;
+  }
 }
 </style>
