@@ -35,10 +35,12 @@
 
     <section>
       <div class="section--content_fullwidth">
-        <services-carousel></services-carousel>
+        <services-carousel />
       </div>
-      <div class="services--button">
-        <button class="primary">See All Services</button>
+    </section>
+    <section>
+      <div class="section--content_fullwidth">
+        <pricing />
       </div>
     </section>
   </div>
@@ -46,10 +48,12 @@
 
 <script>
 import ServicesCarousel from '@/features/Services/components/ServicesCarousel.vue'
+import Pricing from '@/features/Pricing/components/Pricing.vue'
 
 export default {
   components: {
-    ServicesCarousel
+    ServicesCarousel,
+    Pricing
   }
 }
 </script>

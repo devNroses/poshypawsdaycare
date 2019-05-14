@@ -93,3 +93,66 @@ a.navbar-item,
     margin: -23px auto 8px;
   }
 }
+
+.pricing {
+  &--wrapper {
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 8px;
+    display: flex;
+    align-items: flex-start;
+    height: 100%;
+  }
+
+  &--card {
+    position: relative;
+    width: 300px;
+    height: 380px;
+    text-align: center;
+    cursor: pointer;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    transition: transform 0.5s ease;
+  }
+}
+
+.card {
+  &--front,
+  .zUp {
+    z-index: 10;
+  }
+
+  &--back {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    top: 0;
+    overflow: hidden;
+  }
+
+  &--base {
+    width: 20rem;
+    height: 30rem;
+    margin: 0 auto;
+    font-family: 'Lucida Grande', sans-serif;
+    background: #3498db;
+    border-radius: 8px;
+    border-bottom: 3px solid #2980b9;
+    display: block;
+
+    position: absolute;
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
+
+.rotate3d {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}

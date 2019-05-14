@@ -8,13 +8,19 @@
               <nuxt-link to="/">
                 <img class="logo" src="../assets/img/poshy-paws-logo.png" alt="Logo">
               </nuxt-link>
-              <nuxt-link to="/" class="navbar-item">HOME</nuxt-link>
-              <nuxt-link to="/about" class="navbar-item">ABOUT US</nuxt-link>
-              <nuxt-link to="/services" class="navbar-item">SERVICES</nuxt-link>
+              <nuxt-link to="/" class="navbar-item">
+                HOME
+              </nuxt-link>
+              <nuxt-link to="/about" class="navbar-item">
+                ABOUT US
+              </nuxt-link>
+              <nuxt-link to="/services" class="navbar-item">
+                SERVICES
+              </nuxt-link>
               <span class="navbar-burger burger" data-target="navbarMenuHeroB">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span />
+                <span />
+                <span />
               </span>
             </div>
             <div id="navbarMenuHeroB" class="navbar-menu">
@@ -32,8 +38,12 @@
 
       <div class="hero-body">
         <div class="container">
-          <p class="title">A Haute Spa Day</p>
-          <p class="subtitle">For Your Family Member</p>
+          <p class="title">
+            A Haute Spa Day
+          </p>
+          <p class="subtitle">
+            For Your Family Member
+          </p>
           <p class="hero--description">
             Our first priority is making sure you and your beloved
             animal treated to the very best service, as if you were
@@ -44,7 +54,7 @@
     </section>
 
     <div class="container column is-12">
-      <nuxt/>
+      <nuxt />
     </div>
   </div>
 </template>
