@@ -35,12 +35,31 @@
 
     <section>
       <div class="section--content_fullwidth">
-        <services-carousel />
+        <services-carousel/>
+      </div>
+    </section>
+
+    <section>
+      <div class="section--wrapper">
+        <div class="section--content_fullwidth">
+          <div
+            class="section--mainContent section--content"
+            style="margin: 0 auto; text-align: center"
+          >
+            <h1>PRICING</h1>
+            <h3>All size dogs are offered for each service</h3>
+            <p>
+              We over monthly packages as well that combine some of our top services and boarding. If you would like
+              to schedule a service please contact us and set an appointment. Any rush appointments will be
+              charged extra depending on available time slots.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
     <section>
       <div class="section--content_fullwidth">
-        <pricing />
+        <pricing/>
       </div>
     </section>
   </div>

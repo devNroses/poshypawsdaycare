@@ -1,7 +1,7 @@
 <template>
   <div class="servicess--wrapper">
     <div class="servicess--carousel">
-      <carousel :autoplay="true" :autopplay-timeout="2000">
+      <carousel>
         <slide>
           <img
             src="../../../assets/img/servicess/Grooming_dog.png"
@@ -30,6 +30,10 @@ export default {}
 .servicess--wrapper {
   width: 90%;
   margin: 20px auto;
+
+  &:hover {
+    cursor: grab;
+  }
 }
 
 .placeHolder {
