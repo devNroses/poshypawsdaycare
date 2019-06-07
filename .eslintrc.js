@@ -3,7 +3,7 @@ module.exports = {
     browser: true,
     es6: true
   },
-  extends: ['eslint:recommended', 'plugin:vue/essential'],
+  extends: ['eslint:recommended', 'plugin:vue/essential', '@nuxtjs'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
@@ -11,8 +11,10 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: 'module',
-    parser: 'babel-eslint'
+    parser: '@typescript-eslint/parser'
   },
-  plugins: ['vue'],
-  rules: {}
+  plugins: ['vue', '@typescript-eslint'],
+  rules: {
+    '@typescript-eslint/no-unused-vars': 'error'
+  }
 }

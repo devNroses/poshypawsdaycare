@@ -1,30 +1,21 @@
 <template>
   <div class="servicess--wrapper">
     <div class="servicess--carousel">
-      <carousel :autoplay="true">
+      <carousel>
         <slide>
-          <div class="placeHolder">
-            <img
-              src="../../../assets/img/servicess/Grooming_dog.png"
-              alt="Dog Shampoo and Condtioning"
-            >
-          </div>
-          <div class="placeHolder--title"></div>
+          <img
+            src="../../../assets/img/servicess/Grooming_dog.png"
+            alt="Dog Shampoo and Condtioning"
+          >
         </slide>
         <slide>
-          <div class="placeHolder">
-            <img src="../../../assets/img/servicess/Boarding_dog.jpg" alt="Boarding Services">
-          </div>
+          <img src="../../../assets/img/servicess/Boarding_dog.jpg" alt="Boarding Services">
         </slide>
         <slide>
-          <div class="placeHolder">
-            <img src="../../../assets/img/servicess/HairTrim_dog.jpg" alt="Dog Grooming Hair Trim">
-          </div>
+          <img src="../../../assets/img/servicess/HairTrim_dog.jpg" alt="Dog Grooming Hair Trim">
         </slide>
         <slide>
-          <div class="placeHolder">
-            <img src="../../../assets/img/servicess/Daycare_dog.jpg" alt="All Day Daycare">
-          </div>
+          <img src="../../../assets/img/servicess/Daycare_dog.jpg" alt="All Day Daycare">
         </slide>
       </carousel>
     </div>
@@ -39,6 +30,10 @@ export default {}
 .servicess--wrapper {
   width: 90%;
   margin: 20px auto;
+
+  &:hover {
+    cursor: grab;
+  }
 }
 
 .placeHolder {

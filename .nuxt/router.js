@@ -4,7 +4,6 @@ import { interopDefault } from './utils'
 
 const _26ea7b40 = () => interopDefault(import('../pages/about/index.vue' /* webpackChunkName: "pages/about/index" */))
 const _89c36d9a = () => interopDefault(import('../pages/contact/index.vue' /* webpackChunkName: "pages/contact/index" */))
-const _7ca0e86a = () => interopDefault(import('../pages/inspire.vue' /* webpackChunkName: "pages/inspire" */))
 const _a64919fe = () => interopDefault(import('../pages/services/index.vue' /* webpackChunkName: "pages/services/index" */))
 const _f958ff3c = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -90,10 +89,6 @@ export function createRouter() {
       path: "/contact",
       component: _89c36d9a,
       name: "contact"
-    }, {
-      path: "/inspire",
-      component: _7ca0e86a,
-      name: "inspire"
     }, {
       path: "/services",
       component: _a64919fe,
