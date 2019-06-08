@@ -40,8 +40,13 @@ export default class ContactUs extends Vue {
 .contact {
   &--info {
     padding: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
 
     h3 {
+      width: 260px;
       font-size: 24px;
     }
   }
