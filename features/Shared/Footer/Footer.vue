@@ -8,7 +8,7 @@
         boarding, or have any other questions,
         we’re here to help.
       </p>
-      <button class="button--contact">Contact</button>
+      <button @click="goToPage" class="button--contact">Contact</button>
     </div>
   </div>
 </template>
@@ -18,5 +18,9 @@ import { Component } from 'nuxt-property-decorator'
 import Vue from 'vue'
 
 @Component
-export default class Footer extends Vue {}
+export default class Footer extends Vue {
+  public goToPage() {
+    this.$router.push('/contact')
+  }
+}
 </script>

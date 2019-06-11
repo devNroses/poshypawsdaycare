@@ -8,8 +8,9 @@ import '../assets/stylesheets/main.scss'
 import _7705a157 from '../layouts/about.vue'
 import _f4d1a0b0 from '../layouts/contactUs.vue'
 import _6f6c098b from '../layouts/default.vue'
+import _ac397358 from '../layouts/services.vue'
 
-const layouts = { "_about": _7705a157,"_contactUs": _f4d1a0b0,"_default": _6f6c098b }
+const layouts = { "_about": _7705a157,"_contactUs": _f4d1a0b0,"_default": _6f6c098b,"_services": _ac397358 }
 
 export default {
   head: {"title":"poshypawsapp","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"My pioneering Nuxt.js project"},{"hid":"mobile-web-app-capable","name":"mobile-web-app-capable","content":"yes"},{"hid":"apple-mobile-web-app-title","name":"apple-mobile-web-app-title","content":"poshypawsapp"},{"hid":"author","name":"author","content":"Jon Selby"},{"hid":"theme-color","name":"theme-color","content":"#fff"},{"hid":"og:type","name":"og:type","property":"og:type","content":"website"},{"hid":"og:title","name":"og:title","property":"og:title","content":"poshypawsapp"},{"hid":"og:site_name","name":"og:site_name","property":"og:site_name","content":"poshypawsapp"},{"hid":"og:description","name":"og:description","property":"og:description","content":"My pioneering Nuxt.js project"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","type":"text\u002Fcss","href":"\u002F\u002Fcdn.materialdesignicons.com\u002F2.4.85\u002Fcss\u002Fmaterialdesignicons.min.css"},{"rel":"manifest","href":"\u002F_nuxt\u002Fmanifest.7d47bb92.json"},{"rel":"shortcut icon","href":"\u002F_nuxt\u002Ficons\u002Ficon_64.9mld2VBMsQ$.png"},{"rel":"apple-touch-icon","href":"\u002F_nuxt\u002Ficons\u002Ficon_512.9mld2VBMsQ$.png","sizes":"512x512"}],"style":[],"script":[],"htmlAttrs":{"lang":"en"}},
