@@ -5,7 +5,7 @@
         <div class="section--mainContent">
           <img src="../assets/img/dogGrooming.jpg" alt="Dog Grooming">
         </div>
-        <div class="section--content">
+        <div class="section--content-right">
           <h1>DOG GROOMING</h1>
           <h3>We Cater to all your dogs needs</h3>
           <p>
@@ -19,8 +19,8 @@
 
     <section>
       <div class="section--wrapper">
-        <div class="section--content_fullwidth">
-          <div class="section--mainContent section--content" style="margin-left: 0px;">
+        <div class="section--content-fullwidth">
+          <div class="section--content-left">
             <h1>OUR SERVICES</h1>
             <h3>Day with Poshy Paws</h3>
             <p>
@@ -42,10 +42,7 @@
     <section>
       <div class="section--wrapper">
         <div class="section--content_fullwidth">
-          <div
-            class="section--mainContent section--content"
-            style="margin: 0 auto; text-align: center"
-          >
+          <div class="section--mainContent section--content-center">
             <h1>PRICING</h1>
             <h3>All size dogs are offered for each service</h3>
             <p>

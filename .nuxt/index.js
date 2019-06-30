@@ -11,7 +11,6 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 /* Plugins */
 
 import nuxt_plugin_nuxticons_f7879068 from 'nuxt_plugin_nuxticons_f7879068' // Source: ./nuxt-icons.js (mode: 'all')
-import nuxt_plugin_buefy_94702366 from 'nuxt_plugin_buefy_94702366' // Source: ./buefy.js (mode: 'all')
 import nuxt_plugin_axios_182e2208 from 'nuxt_plugin_axios_182e2208' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_vueCarousel_9f2ade14 from 'nuxt_plugin_vueCarousel_9f2ade14' // Source: ../plugins/vueCarousel.js (mode: 'client')
 
@@ -134,10 +133,6 @@ async function createApp(ssrContext) {
 
   if (typeof nuxt_plugin_nuxticons_f7879068 === 'function') {
     await nuxt_plugin_nuxticons_f7879068(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_buefy_94702366 === 'function') {
-    await nuxt_plugin_buefy_94702366(app.context, inject)
   }
 
   if (typeof nuxt_plugin_axios_182e2208 === 'function') {

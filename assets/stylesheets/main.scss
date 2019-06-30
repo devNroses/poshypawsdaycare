@@ -5,3 +5,16 @@
 @import './pages/about.scss';
 @import './pages/contact.scss';
 @import './pages/landing.scss';
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+.nuxt-link-active {
+  color: #4ec4d1;
+}

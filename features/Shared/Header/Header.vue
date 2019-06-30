@@ -1,29 +1,14 @@
 <template>
-  <div class="hero-head">
-    <nav class="navbar">
-      <div class="container">
-        <div class="navbar-brand">
-          <nuxt-link to="/">
-            <img class="logo" src="~assets/img/poshy-paws-logo.png" alt="Logo">
-          </nuxt-link>
-          <nuxt-link to="/" class="navbar-item">HOME</nuxt-link>
-          <nuxt-link to="/about" class="navbar-item">ABOUT US</nuxt-link>
-          <nuxt-link to="/services" class="navbar-item">SERVICES</nuxt-link>
-          <span class="navbar-burger burger" data-target="navbarMenuHeroB">
-            <span/>
-            <span/>
-            <span/>
-          </span>
-        </div>
-        <div id="navbarMenuHeroB" class="navbar-menu">
-          <div class="navbar-end">
-            <span class="navbar-item">
-              <nuxt-link to="/contact" class="button is-info is-inverted">
-                <span>Contact Us</span>
-              </nuxt-link>
-            </span>
-          </div>
-        </div>
+  <div class="header--wrapper">
+    <nav class="header--nav">
+      <div>
+        <img class="header--logo" src="~assets/img/poshy-paws-logo.png" alt="Logo">
+      </div>
+      <div class="header--links">
+        <nuxt-link to="/" exact>HOME</nuxt-link>
+        <nuxt-link to="/about">ABOUT US</nuxt-link>
+        <nuxt-link to="/services">SERVICES</nuxt-link>
+        <nuxt-link to="/contact">CONTACT US</nuxt-link>
       </div>
     </nav>
   </div>
