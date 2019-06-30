@@ -1,39 +1,32 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": ["dom", "es2015"],
-    "module": "es2015",
+    "target": "esnext",
+    "module": "esnext",
     "moduleResolution": "node",
-    "importHelpers": true,
-    "experimentalDecorators": true,
+    "lib": [
+      "esnext",
+      "esnext.asynciterable",
+      "dom"
+    ],
     "esModuleInterop": true,
-    "noImplicitAny": false,
-    "noImplicitThis": false,
-    "strictNullChecks": true,
-    "removeComments": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
     "allowJs": true,
-    "baseUrl": "./",
-    "rootDir": "./",
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitAny": false,
+    "noEmit": true,
+    "baseUrl": ".",
     "paths": {
-      "~/*": ["./*"],
-      "@/*": ["./src/*"]
+      "~/*": [
+        "./*"
+      ],
+      "@/*": [
+        "./*"
+      ]
     },
-    "sourceMap": true
-  },
-  "include": [
-    // Target our shims folder
-    "./shims/*.ts",
-
-    // Target our src ts / vue appropriately
-    // "./src/**/*.ts",
-    // "./src/**/*.vue",
-
-    // Ensure we build our Jest files so they can
-    // properly import their references
-    "./tests/unit/**/*.ts",
-    "./tests/unit/**/*.vue"
-  ],
-  "exclude": ["./node_modules", "./.nuxt"]
+    "types": [
+      "@types/node",
+      "@nuxt/vue-app"
+    ]
+  }
 }

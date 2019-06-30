@@ -29,7 +29,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [],
+  plugins: [{ src: 'plugins/vueCarousel.js', ssr: false }],
 
   /*
   ** Nuxt.js modules
@@ -38,7 +38,6 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     // Doc: https://buefy.github.io/#/documentation
-    'nuxt-buefy',
     '@nuxtjs/pwa',
     'nuxt-tslint'
   ],

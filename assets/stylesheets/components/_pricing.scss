@@ -1,0 +1,111 @@
+.pricing {
+  &--wrapper {
+    display: flex;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  &--card {
+    position: relative;
+    width: 300px;
+    height: 380px;
+    text-align: center;
+    cursor: pointer;
+
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    transition: transform 0.5s ease;
+  }
+
+  &--details {
+    font-size: 16px;
+    margin-top: 40%;
+
+    li {
+      margin: 15px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+
+  &--price {
+    font-size: 75px;
+    color: #4ec4d1;
+    margin: 40% auto 2px;
+  }
+
+  &--header {
+    font-size: 22px;
+  }
+
+  &--description {
+    font-size: 14px;
+    margin: 12px auto;
+  }
+
+  &--footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+    font-size: 20px;
+    color: gray;
+    left: 0;
+  }
+}
+
+// start
+.card {
+  &--front,
+  .zUp {
+    z-index: 10;
+  }
+
+  &--back {
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    top: 0;
+    overflow: hidden;
+    // background: #4ec4d1;
+    color: white;
+  }
+
+  &--base {
+    width: 20rem;
+    height: 30rem;
+    margin: 0 -10px;
+    font-family: 'Lucida Grande', sans-serif;
+
+    border-radius: 8px;
+    background: #272727;
+    color: lightgray;
+    border: 1px solid lightgray;
+    display: block;
+
+    position: absolute;
+    z-index: 100;
+
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+
+  &--front {
+    padding: 20px;
+  }
+}
+
+.rotate3d {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.details--finePrint {
+  font-size: 14px;
+}
