@@ -3,7 +3,7 @@
     <section>
       <div class="section--wrapper">
         <div class="section--mainContent">
-          <img src="../assets/img/dogGrooming.jpg" alt="Dog Grooming">
+          <img src="../assets/img/dogGrooming.jpg" alt="Dog Grooming" />
         </div>
         <div class="section--content-right">
           <h1>DOG GROOMING</h1>
@@ -35,7 +35,7 @@
 
     <section>
       <div class="section--content_fullwidth">
-        <services-carousel/>
+        <services-carousel />
       </div>
     </section>
 
@@ -44,9 +44,9 @@
         <div class="section--content_fullwidth">
           <div class="section--mainContent section--content-center">
             <h1>PRICING</h1>
-            <h3>All size dogs are offered for each service</h3>
+            <h3>We service any size dog</h3>
             <p>
-              We over monthly packages as well that combine some of our top services and boarding. If you would like
+              We offer monthly packages that combine some of our top services for your furry family member. If you would like
               to schedule a service please contact us and set an appointment. Any rush appointments will be
               charged extra depending on available time slots.
             </p>
@@ -56,7 +56,7 @@
     </section>
     <section>
       <div class="section--content_fullwidth">
-        <pricing/>
+        <pricing />
       </div>
     </section>
   </div>
