@@ -170,10 +170,14 @@
 }
 
 @media only screen and (max-width: 500px) {
-  html,
-  body {
-    overflow: hidden;
-    overflow-y: scroll;
+  .header {
+    &--links {
+      display: none;
+    }
+
+    &--nav div {
+      margin: 0 80px;
+    }
   }
   .landingPage {
     &--container {
@@ -182,7 +186,7 @@
 
     &--hero-content {
       text-align: right;
-      margin: 0 -5px;
+      margin: 100px -5px;
     }
 
     &--description {
