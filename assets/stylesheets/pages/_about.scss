@@ -10,6 +10,7 @@
     color: white;
     background-image: url(~assets/img/about_bg.jpg);
     background-position: left center;
+    background-size: cover;
   }
 }
 
@@ -31,9 +32,10 @@
     margin: 275px 180px 0;
 
     h1 {
+      color: #4ec4d1;
       font-size: 60px;
       font-weight: bold;
-      color: #4ec4d1;
+      margin-bottom: -15px;
     }
 
     h3 {

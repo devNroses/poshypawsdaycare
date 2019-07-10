@@ -6,6 +6,12 @@
 @import './pages/contact.scss';
 @import './pages/landing.scss';
 
+@import './mobile//mobile.scss';
+
+:host {
+  overflow: auto;
+}
+
 html {
   font-family: Arial, Helvetica, sans-serif;
 }
