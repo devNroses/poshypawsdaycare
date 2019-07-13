@@ -132,6 +132,11 @@
         width: 80%;
       }
     }
+
+    &--content-fullwidth,
+    .servicess--wrapper {
+      display: none;
+    }
   }
 
   .pricing {
