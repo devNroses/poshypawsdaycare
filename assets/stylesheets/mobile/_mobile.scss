@@ -1,7 +1,7 @@
 // tablet
 @media only screen and (max-width: 1500px) {
-  html {
-    overflow-x: hidden;
+  body {
+    overflow: auto;
   }
 
   .landingPage {
@@ -169,7 +169,7 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 575px) {
   .header {
     &--links {
       display: none;
