@@ -1,7 +1,8 @@
 // tablet
 @media only screen and (max-width: 1500px) {
-  body {
-    overflow: auto;
+  html {
+    overflow: hidden;
+    overflow-y: scroll !important;
   }
 
   .landingPage {
