@@ -66,8 +66,9 @@
 
   .footer {
     div {
-      width: 24%;
+      width: 35%;
       padding-top: 80px;
+      padding-right: 130px;
     }
 
     &--content {
@@ -132,11 +133,6 @@
         width: 80%;
       }
     }
-
-    &--content-fullwidth,
-    .servicess--wrapper {
-      display: none;
-    }
   }
 
   .pricing {
@@ -155,8 +151,9 @@
 
   .footer {
     div {
-      width: 8%;
+      width: 20%;
       padding-top: 120px;
+      padding-right: 110px;
 
       &:first-child {
         background-position: center;

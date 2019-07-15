@@ -28,14 +28,9 @@
               includes dog wash packages or items such as nail trimming/painting and dog daycare. We strive
               to provide a place to come in and instantly relax for not only you but your dog as well.
             </p>
+            <services-carousel />
           </div>
         </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="section--content_fullwidth">
-        <services-carousel />
       </div>
     </section>
 
