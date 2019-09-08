@@ -9,6 +9,7 @@
     >
       <div class="card--front card--base">
         <h1 class="pricing--price">${{ list.price }}</h1>
+
         <p class="pricing--header">{{ list.name}}</p>
         <p class="pricing--description">{{ list.description }}</p>
 
@@ -18,6 +19,7 @@
       <div class="card--back card--base" :class="{zUp: list.favorited}">
         <div class="pricing--details">
           <h3>Includes:</h3>
+
           <ul>
             <li>
               <span>{{ list.smallDog }} -</span>
@@ -33,11 +35,12 @@
             </li>
             <li>
               <span>{{ list.extraLargeDog }}</span>
-              <br>
+              <br />
               <span class="details--finePrint">{{ list.extraLargeDogPrice }}</span>
             </li>
           </ul>
         </div>
+
         <div class="pricing--footer">View Packages</div>
       </div>
     </div>

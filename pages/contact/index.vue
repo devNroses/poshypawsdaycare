@@ -6,18 +6,18 @@
       <div class="contact--info">
         <h3>
           Open
-          <br>Monday - Friday
-          <br>6:30 am - 7:00 pm
-          <br>Saturday
-          <br>8 am - 5:00 pm
+          <br />Monday - Friday
+          <br />6:30 am - 7:00 pm
+          <br />Saturday
+          <br />8 am - 5:00 pm
         </h3>
-        <br>
+        <br />
         <h3>
           Call:
           623-302-9211
-          <br>Address:
-          <br>9501 W. Peoria Ave. #101
-          <br>Peoria, AZ 85345
+          <br />Address:
+          <br />9501 W. Peoria Ave. #101
+          <br />Peoria, AZ 85345
         </h3>
       </div>
     </div>

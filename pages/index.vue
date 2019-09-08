@@ -3,7 +3,7 @@
     <section>
       <div class="section--wrapper">
         <div class="section--mainContent">
-          <img src="../assets/img/dogGrooming.jpg" alt="Dog Grooming" />
+          <img src="@/assets/img/dogGrooming.jpg" alt="Dog Grooming" />
         </div>
         <div class="section--content-right">
           <h1>DOG GROOMING</h1>
@@ -28,7 +28,7 @@
               includes dog wash packages or items such as nail trimming/painting and dog daycare. We strive
               to provide a place to come in and instantly relax for not only you but your dog as well.
             </p>
-            <services-carousel />
+            <carousel :cards="cards" />
           </div>
         </div>
       </div>
@@ -58,13 +58,38 @@
 </template>
 
 <script>
-import ServicesCarousel from '@/features/Services/components/ServicesCarousel.vue'
+import Carousel from '@/features/Services/components/ServicesCarousel.vue'
 import Pricing from '@/features/Pricing/components/Pricing.vue'
 
 export default {
-  components: {
-    ServicesCarousel,
-    Pricing
+  name: 'Home',
+  components: { Carousel, Pricing },
+
+  data() {
+    return {
+      cards: [
+        {
+          description: 'test',
+          imgName: 'Grooming_dog.png',
+          title: 'Dog Grooming'
+        },
+        {
+          description: 'Full & Half Day',
+          imgName: 'Daycare_dog.jpg',
+          title: 'Dog Daycare'
+        },
+        {
+          description: '24 hour care by staff',
+          imgName: 'Boarding_dog.jpg',
+          title: 'Boarding'
+        },
+        {
+          description: 'test',
+          imgName: 'HairTrim_dog.jpg',
+          title: 'Dog Grooming'
+        }
+      ]
+    }
   }
 }
 </script>

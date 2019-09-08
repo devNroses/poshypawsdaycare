@@ -13,7 +13,6 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 import nuxt_plugin_nuxticons_f7879068 from 'nuxt_plugin_nuxticons_f7879068' // Source: ./nuxt-icons.js (mode: 'all')
 import nuxt_plugin_templatesplugin475728c7_6c49cf0d from 'nuxt_plugin_templatesplugin475728c7_6c49cf0d' // Source: ./templates.plugin.475728c7.js (mode: 'all')
 import nuxt_plugin_axios_182e2208 from 'nuxt_plugin_axios_182e2208' // Source: ./axios.js (mode: 'all')
-import nuxt_plugin_vueCarousel_9f2ade14 from 'nuxt_plugin_vueCarousel_9f2ade14' // Source: ../plugins/vueCarousel.js (mode: 'client')
 
 // Component: <NoSsr>
 Vue.component(NoSsr.name, NoSsr)
@@ -71,7 +70,7 @@ async function createApp(ssrContext) {
       dateErr: null,
       error(err) {
         err = err || null
-        app.context._errored = !!err
+        app.context._errored = Boolean(err)
         err = err ? normalizeError(err) : null
         const nuxt = this.nuxt || this.$options.nuxt
         nuxt.dateErr = Date.now()
@@ -142,10 +141,6 @@ async function createApp(ssrContext) {
 
   if (typeof nuxt_plugin_axios_182e2208 === 'function') {
     await nuxt_plugin_axios_182e2208(app.context, inject)
-  }
-
-  if (process.client && typeof nuxt_plugin_vueCarousel_9f2ade14 === 'function') {
-    await nuxt_plugin_vueCarousel_9f2ade14(app.context, inject)
   }
 
   // If server-side, wait for async component to be resolved first
