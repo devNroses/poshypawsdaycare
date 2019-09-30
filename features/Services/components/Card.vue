@@ -40,7 +40,9 @@ export default {
   }
 
   &--title {
-    font-weight: bold;
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 0;
   }
 
   &--content {

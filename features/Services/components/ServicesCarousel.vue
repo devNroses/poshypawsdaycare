@@ -56,7 +56,8 @@ export default {
 .card-carousel {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  margin: 0 20px 30px;
+  width: 280px;
 }
 
 .btn {
