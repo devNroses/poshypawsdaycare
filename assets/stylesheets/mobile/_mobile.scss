@@ -1,0 +1,317 @@
+// tablet
+@media only screen and (max-width: 1500px) {
+  html {
+    overflow: hidden;
+    overflow-y: scroll !important;
+  }
+
+  .landingPage {
+    &--hero-content {
+      margin: 0 30px;
+    }
+
+    &--description {
+      width: 330px;
+    }
+  }
+
+  .section {
+    &--mainContent {
+      img {
+        width: 500px;
+        margin: 28px -20px 10px;
+      }
+    }
+
+    &--content-right,
+    &--content-center,
+    &--content-left {
+      h1 {
+        font-size: 100px;
+        font-weight: bolder;
+      }
+
+      h3 {
+        font-size: 32px;
+        margin: -82px auto 8px;
+      }
+    }
+
+    &--content-right h1 {
+      margin-left: -100px;
+    }
+
+    &--content-left {
+      h3 {
+        margin-left: 130px;
+      }
+
+      p {
+        width: 80%;
+      }
+    }
+  }
+
+  .about {
+    &--wrapper {
+      background-position: center;
+    }
+  }
+
+  .content {
+    &--wrapper {
+      margin: 635px 180px 0;
+    }
+  }
+
+  .footer {
+    div {
+      width: 35%;
+      padding-top: 80px;
+      padding-right: 130px;
+    }
+
+    &--content {
+      p {
+        font-weight: 500;
+      }
+    }
+  }
+
+  .carousel {
+    &--wrapper {
+      margin-bottom: 140px;
+    }
+    &--content h1 {
+      font-size: 110px !important;
+    }
+  }
+
+  .about--wrapper,
+  .contact--wrapper {
+    .content--wrapper {
+      margin: 335px 180px 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .carousel {
+    &--wrapper {
+      margin-bottom: 140px;
+    }
+    &--content h1 {
+      font-size: 90px !important;
+    }
+  }
+
+  .landingPage {
+    &--title {
+      margin-top: 30%;
+      font-size: 32px;
+      font-weight: bolder;
+    }
+
+    &--subtitle {
+      font-size: 20px;
+    }
+
+    &--description {
+      width: 230px;
+    }
+  }
+
+  .section {
+    &--mainContent {
+      img {
+        width: 420px;
+      }
+    }
+
+    &--content-right,
+    &--content-center,
+    &--content-left {
+      h1 {
+        font-size: 70px;
+      }
+
+      h3 {
+        font-size: 24px;
+        margin: -72px auto 8px;
+      }
+
+      p {
+        width: 80%;
+      }
+    }
+
+    &--content-right h1 {
+      margin-left: -60px;
+    }
+
+    &--content-left {
+      h3 {
+        margin-left: 120px;
+      }
+
+      p {
+        width: 80%;
+      }
+    }
+  }
+
+  .pricing {
+    &--wrapper {
+      flex-direction: column;
+    }
+
+    &--card {
+      margin-bottom: 150px;
+
+      &:last-child {
+        margin-bottom: 25px;
+      }
+    }
+  }
+
+  .footer {
+    div {
+      width: 20%;
+      padding-top: 120px;
+      padding-right: 110px;
+
+      &:first-child {
+        background-position: center;
+      }
+    }
+
+    &--content {
+      h3 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .header {
+    &--links {
+      display: none;
+    }
+
+    &--nav div {
+      margin: 0 80px;
+    }
+  }
+  .landingPage {
+    &--container {
+      background-position: top right;
+    }
+
+    &--hero-content {
+      text-align: right;
+      margin: 100px -5px;
+    }
+
+    &--description {
+      margin-left: 222px;
+      text-align: left;
+    }
+  }
+
+  .section {
+    &--wrapper {
+      flex-wrap: wrap;
+    }
+
+    &--content-right,
+    &--content-center,
+    &--content-left {
+      text-align: center;
+      h1 {
+        font-size: 55px;
+      }
+
+      h3 {
+        font-size: 24px;
+        margin: -60px auto 8px;
+      }
+
+      p {
+        width: 80%;
+      }
+    }
+
+    &--content-right {
+      h1 {
+        margin-left: 0px;
+      }
+
+      h3 {
+        margin-left: 15px;
+      }
+
+      p {
+        margin-left: 35px;
+      }
+    }
+
+    &--content-left {
+      h1 {
+        margin-left: 50px;
+        text-align: left;
+      }
+      h3 {
+        margin-top: -5574 + px;
+        margin-left: 25px;
+      }
+
+      p {
+        width: 80%;
+        margin-left: 40px;
+      }
+    }
+  }
+
+  .footer {
+    div {
+      &:first-child {
+        display: none;
+      }
+      height: 260px;
+      padding-top: 0px;
+    }
+
+    height: 0px;
+    margin: 150px auto 0px;
+  }
+
+  .carousel {
+    &--wrapper {
+      margin-bottom: 140px;
+    }
+    &--content h1 {
+      font-size: 70px !important;
+    }
+  }
+
+  .about--wrapper,
+  .contact--wrapper {
+    .content--wrapper {
+      margin: 285px 30px 0;
+
+      h3 {
+        font-size: 26px;
+        width: 400px;
+      }
+
+      p {
+        width: 380px;
+      }
+    }
+  }
+}
