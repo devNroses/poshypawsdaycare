@@ -66,8 +66,9 @@
 
   .footer {
     div {
-      width: 24%;
+      width: 35%;
       padding-top: 80px;
+      padding-right: 130px;
     }
 
     &--content {
@@ -76,9 +77,34 @@
       }
     }
   }
+
+  .carousel {
+    &--wrapper {
+      margin-bottom: 140px;
+    }
+    &--content h1 {
+      font-size: 110px !important;
+    }
+  }
+
+  .about--wrapper,
+  .contact--wrapper {
+    .content--wrapper {
+      margin: 335px 180px 0;
+    }
+  }
 }
 
 @media only screen and (max-width: 768px) {
+  .carousel {
+    &--wrapper {
+      margin-bottom: 140px;
+    }
+    &--content h1 {
+      font-size: 90px !important;
+    }
+  }
+
   .landingPage {
     &--title {
       margin-top: 30%;
@@ -132,11 +158,6 @@
         width: 80%;
       }
     }
-
-    &--content-fullwidth,
-    .servicess--wrapper {
-      display: none;
-    }
   }
 
   .pricing {
@@ -155,8 +176,9 @@
 
   .footer {
     div {
-      width: 8%;
+      width: 20%;
       padding-top: 120px;
+      padding-right: 110px;
 
       &:first-child {
         background-position: center;
@@ -196,7 +218,8 @@
     }
 
     &--description {
-      margin-left: 115px;
+      margin-left: 222px;
+      text-align: left;
     }
   }
 
@@ -265,5 +288,30 @@
 
     height: 0px;
     margin: 150px auto 0px;
+  }
+
+  .carousel {
+    &--wrapper {
+      margin-bottom: 140px;
+    }
+    &--content h1 {
+      font-size: 70px !important;
+    }
+  }
+
+  .about--wrapper,
+  .contact--wrapper {
+    .content--wrapper {
+      margin: 285px 30px 0;
+
+      h3 {
+        font-size: 26px;
+        width: 400px;
+      }
+
+      p {
+        width: 380px;
+      }
+    }
   }
 }

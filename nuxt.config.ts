@@ -29,7 +29,7 @@ module.exports = {
   /*
   ** Plugins to load before mounting the App
   */
-  plugins: [{ src: 'plugins/vueCarousel.js', ssr: false }],
+  plugins: [],
 
   /*
   ** Nuxt.js modules
@@ -39,7 +39,22 @@ module.exports = {
     '@nuxtjs/axios',
     // Doc: https://buefy.github.io/#/documentation
     '@nuxtjs/pwa',
-    'nuxt-tslint'
+    'nuxt-tslint',
+    [
+      'nuxt-fontawesome',
+      {
+        imports: [
+          {
+            set: '@fortawesome/free-solid-svg-icons',
+            icons: ['fas']
+          },
+          {
+            set: '@fortawesome/free-brands-svg-icons',
+            icons: ['fab']
+          }
+        ]
+      }
+    ]
   ],
   /*
   ** Axios module configuration
@@ -55,16 +70,16 @@ module.exports = {
     /*
     ** You can extend webpack config here
     */
-    extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    }
+    // extend(config, ctx) {
+    // Run ESLint on save
+    // if (ctx.isDev && ctx.isClient) {
+    //   config.module.rules.push({
+    //     enforce: 'pre',
+    //     test: /\.(js|vue)$/,
+    //     loader: 'eslint-loader',
+    //     exclude: /(node_modules)/
+    //   })
+    // }
+    // }
   }
 }

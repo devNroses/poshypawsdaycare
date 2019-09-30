@@ -1,57 +1,94 @@
 <template>
-  <div class="servicess--wrapper">
-    <carousel>
-      <slide>
-        <img src="../../../assets/img/servicess/Grooming_dog.png" alt="Dog Shampoo and Condtioning">
-      </slide>
-      <slide>
-        <img src="../../../assets/img/servicess/Boarding_dog.jpg" alt="Boarding Services">
-      </slide>
-      <slide>
-        <img src="../../../assets/img/servicess/HairTrim_dog.jpg" alt="Dog Grooming Hair Trim">
-      </slide>
-      <slide>
-        <img src="../../../assets/img/servicess/Daycare_dog.jpg" alt="All Day Daycare">
-      </slide>
-    </carousel>
-  </div>
+  <section class="card-carousel">
+    <ArrowButton arrowType="left" :disabled="reachedMaxLeft" @click.native="showPrevElement" />
+    <Card
+      class="current-element"
+      :title="currentElement.title"
+      :description="currentElement.description"
+      :imgName="currentElement.imgName"
+    />
+    <ArrowButton arrowType="right" :disabled="reachedMaxRight" @click.native="showNextElement" />
+  </section>
 </template>
 
-<script lang="ts">
-import { Component } from 'nuxt-property-decorator'
-import Vue from 'vue'
+<script>
+import { Component, Prop, Vue } from 'nuxt-property-decorator'
+import Card from './Card.vue'
+import ArrowButton from './ArrowButton.vue'
 
-@Component
-export default class ServicesCarousel extends Vue {}
+export default {
+  name: 'Carousel',
+  props: { cards: Array },
+  components: { Card, ArrowButton },
+
+  data() {
+    return {
+      currentElementIndex: 0
+    }
+  },
+  computed: {
+    currentElement() {
+      return this.cards[this.currentElementIndex]
+    },
+    reachedMaxLeft() {
+      return this.currentElementIndex === 0
+    },
+    reachedMaxRight() {
+      return this.currentElementIndex === this.cards.length - 1
+    }
+  },
+
+  methods: {
+    showNextElement() {
+      this.currentElementIndex++
+    },
+    showPrevElement() {
+      this.currentElementIndex--
+    },
+    showElement(elementIndex) {
+      this.currentElementIndex = elementIndex
+    }
+  }
+}
 </script>
 
-<style lang="scss">
-.servicess--wrapper {
-  width: 90%;
-  margin: 20px auto;
+<style lang="scss" scoped>
+.card-carousel {
+  display: flex;
+  align-items: center;
+  margin: 0 20px 30px;
+  width: 280px;
+}
+
+.btn {
+  height: 90px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.5;
+
+  &:focus {
+    outline: none;
+  }
 
   &:hover {
-    cursor: grab;
+    opacity: 0.7;
+  }
+
+  &:disabled {
+    opacity: 0.2;
+    cursor: default;
   }
 }
 
-.placeHolder {
-  width: 100%;
-  height: auto;
-  margin-top: 10px;
+.icon {
+  height: 90px;
+  width: auto;
 }
 
-.services--button {
-  text-align: center;
-  margin: 20px auto;
-  button {
-    width: 250px;
-    padding: 5px;
-    border-radius: 12px;
-    outline: none;
-    color: white;
-    background: #4ec4d1;
-    font-size: 16px;
+@media only screen and (max-width: 768px) {
+  .btn {
+    display: none;
   }
 }
 </style>
