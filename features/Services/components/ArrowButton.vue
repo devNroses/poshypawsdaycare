@@ -37,10 +37,4 @@ export default {
   height: 90px;
   width: auto;
 }
-
-@media only screen and (max-width: 768px) {
-  .btn {
-    display: none;
-  }
-}
 </style>
