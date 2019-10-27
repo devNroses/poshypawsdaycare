@@ -24,7 +24,7 @@
           <h3>Day with Poshy Paws</h3>
           <p>
             We want your furry family member to be so excited to be here. With a full array of services, which
-            includes dog wash packages or items such as nail trimming/painting and dog daycare. We strive
+            includes daycare packages or grooming items such as nail trimming/painting. We strive
             to provide a place to come in and instantly relax for not only you but your dog as well.
           </p>
         </div>
@@ -41,7 +41,7 @@
             <h1>PRICING</h1>
             <h3>We service any size dog</h3>
             <p>
-              We offer monthly packages that combine some of our top services for your furry family member. If you would like
+              We offer daycare packages and indivisual grooming services for your furry family member. If you would like
               to schedule a service please contact us and set an appointment. Any rush appointments will be
               charged extra depending on available time slots.
             </p>
@@ -75,7 +75,8 @@ export default {
           title: 'Grooming'
         },
         {
-          description: 'Half Day Care: 4 hours of cage free play time from the time of drop off. Come in to take a tour. Full Day Care:8 hours of cage free play time from the time of drop off. Come in to take a tour.',
+          description:
+            'Half Day Care: 4 hours of cage free play time from the time of drop off. Come in to take a tour. Full Day Care:8 hours of cage free play time from the time of drop off. Come in to take a tour.',
           imgName: 'Daycare_dog.jpg',
           title: 'Dog Daycare'
         },
@@ -89,12 +90,12 @@ export default {
           imgName: 'HairTrim_dog.jpg',
           title: 'Dog Grooming'
         },
-         {
+        {
           description: `We all want our pets to look good, but sometimes they need an extra pizzazz and you don’t know where to look. Get your pets nails trimmed, buffered and painted any color!`,
           imgName: 'NailTrim_dog.png',
           title: 'Nail Services'
         },
-         {
+        {
           description: `Is your furry friend scooting or showing discomfort? If so, make sure to add this feature to your package! Our skilled and gentle groomer will take care them.`,
           imgName: 'AnalExpression_dog.png',
           title: 'Anal Expression'
