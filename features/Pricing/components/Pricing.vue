@@ -47,8 +47,7 @@
 </template>
 
 <script lang="ts">
-import { Component } from 'nuxt-property-decorator'
-import Vue from 'vue'
+import { Component, Vue } from 'nuxt-property-decorator'
 
 @Component
 export default class Pricing extends Vue {

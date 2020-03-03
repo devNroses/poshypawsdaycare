@@ -1,32 +1,29 @@
 {
   "compilerOptions": {
-    "target": "esnext",
+    "target": "es2018",
     "module": "esnext",
-    "moduleResolution": "node",
-    "lib": [
-      "esnext",
-      "esnext.asynciterable",
-      "dom"
-    ],
-    "esModuleInterop": true,
+    "importHelpers": true,
     "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "noImplicitThis": false,
+    "removeComments": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "lib": ["esnext", "esnext.asynciterable", "dom"],
+    "esModuleInterop": true,
     "allowJs": true,
     "sourceMap": true,
     "strict": true,
-    "noImplicitAny": false,
     "noEmit": true,
-    "baseUrl": ".",
+    "baseUrl": "./",
+    "rootDir": "./",
     "paths": {
-      "~/*": [
-        "./*"
-      ],
-      "@/*": [
-        "./*"
-      ]
+      "~/*": ["./*"],
+      "@/*": ["./*"]
     },
-    "types": [
-      "@types/node",
-      "@nuxt/vue-app"
-    ]
-  }
+    "types": ["@types/node", "@nuxt/types"],
+    "strictPropertyInitialization": false
+  },
+  "include": ["./**/*.ts", "./**/*.vue"],
+  "exclude": ["node_modules"]
 }
