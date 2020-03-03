@@ -30,7 +30,7 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [],
-
+  buildModules: ['@nuxt/typescript-build'],
   /*
   ** Nuxt.js modules
   */
@@ -56,6 +56,12 @@ module.exports = {
       }
     ]
   ],
+  typescript: {
+    ignoreNotFoundWarnings: true,
+    typeCheck: {
+      eslint: true
+    }
+  },
   /*
   ** Axios module configuration
   */
@@ -67,6 +73,12 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    babel: {
+      plugins: [
+        ['@babel/plugin-proposal-decorators', { legacy: true }],
+        ['@babel/plugin-proposal-class-properties', { loose: true }]
+      ]
+    }
     /*
     ** You can extend webpack config here
     */
