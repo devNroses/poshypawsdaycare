@@ -19,7 +19,6 @@
       <div class="card--back card--base" :class="{zUp: list.favorited}">
         <div class="pricing--details">
           <h3>Includes:</h3>
-
           <ul>
             <li>
               <span>{{ list.smallDog }} -</span>
@@ -30,8 +29,8 @@
               <span>${{ list.mediumDogPrice }}</span>
             </li>
             <li>
-              <span>{{ list.largeDog }} -</span>
-              <span>${{ list.largeDogPrice }}</span>
+              <span>{{ list.largeDog }}</span>
+              <span v-if="list.largeDogPrice !== null">- ${{ list.largeDogPrice }} +</span>
             </li>
             <li>
               <span>{{ list.extraLargeDog }}</span>
@@ -55,46 +54,43 @@ import Vue from 'vue'
 export default class Pricing extends Vue {
   public packages: any[] = [
     {
-      price: 22,
+      price: 25,
       name: 'Bath & Brush',
-      description: 'Base price for small dogs (1-25lbs)',
-      smallDog: 'Small dog (1-25 lbs)',
-      smallDogPrice: 22,
-      mediumDog: 'Medium dog (26 - 50 lbs)',
-      mediumDogPrice: 33,
-      largeDog: 'Large dog (51 - 100 lbs)',
+      description: 'Base price for small dogs (0 - 25lbs)',
+      smallDog: 'Small dog (0 - 25 lbs)',
+      smallDogPrice: 25,
+      mediumDog: 'Medium dog (26 - 49lbs)',
+      mediumDogPrice: 36,
+      largeDog: 'Large dog (50+lbs)',
       largeDogPrice: 65,
-      extraLargeDog: 'Extra large dog (101 lbs + )',
-      extraLargeDogPrice: 'Ask for a quote',
       favorited: false
     },
     {
-      price: 15,
-      name: 'Furminator Treatment',
-      description: 'Base price for small dogs (1-25lbs)',
-      smallDog: 'Small dog (1-25 lbs)',
-      smallDogPrice: 15,
-      mediumDog: 'Medium dog (26 - 50 lbs)',
-      mediumDogPrice: 20,
-      largeDog: 'Large dog (51 - 100 lbs)',
-      largeDogPrice: 25,
-      extraLargeDog: 'Extra large dog (101 lbs + )',
-      extraLargeDogPrice: 'Ask for a quote',
-      favorited: false
-    },
-    {
-      price: 33,
-      name: 'Haircut',
-      description:
-        'Includes: Eyes & Ears cleaned, nails cut & filed, anal expressions, sanitary, shampoo, conditioner, blow out, brush out, hair cut',
-      smallDog: 'Small dog (1-25 lbs)',
-      smallDogPrice: 33,
-      mediumDog: 'Medium dog (26 - 50 lbs)',
-      mediumDogPrice: 44,
-      largeDog: 'Large dog (51 - 100 lbs)',
+      price: 36,
+      name: 'Full Groom',
+      description: 'Base price for small dogs (0 - 25lbs)',
+      smallDog: 'Small dog (0 - 25lbs)',
+      smallDogPrice: 36,
+      mediumDog: 'Medium dog (26 - 49lbs)',
+      mediumDogPrice: 48,
+      largeDog: 'Large dog (50+ lbs)',
       largeDogPrice: 75,
-      extraLargeDog: 'Extra large dog (101 lbs + )',
+      extraLargeDog: 'Extra large dog',
       extraLargeDogPrice: 'Ask for a quote',
+      favorited: false
+    },
+    {
+      price: 40,
+      name: 'Boarding 24 hour care',
+      description: 'Includes: per night. Current price is for first dog',
+      smallDog: 'First dog',
+      smallDogPrice: 40,
+      mediumDog: 'Additional Dogs (per added dog)',
+      mediumDogPrice: 20,
+      largeDog: 'Check in by 4pm',
+      largeDogPrice: null,
+      extraLargeDog: 'Our food per night, per dog',
+      extraLargeDogPrice: '$5',
       favorited: false
     }
   ]
