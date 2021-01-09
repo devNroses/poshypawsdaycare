@@ -7,9 +7,11 @@
         <h3>
           Open
           <br />Monday - Friday
-          <br />6:30 am - 7:00 pm
+          <br />7:00 am - 5:00 pm
           <br />Saturday
-          <br />8 am - 5:00 pm
+          <br />8:00 am - 5:00 pm
+          <br />> Sunday
+          <br/> Closed
         </h3>
         <br />
         <h3>
