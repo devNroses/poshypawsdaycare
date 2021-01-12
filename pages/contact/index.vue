@@ -6,11 +6,11 @@
       <div class="contact--info">
         <h3>
           Open
-          <br />Monday - Friday
+          <br />Tuesday - Friday
           <br />7:00 am - 5:00 pm
           <br />Saturday
           <br />8:00 am - 5:00 pm
-          <br />> Sunday
+          <br /> Sunday & Monday
           <br/> Closed
         </h3>
         <br />
