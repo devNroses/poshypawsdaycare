@@ -106,19 +106,18 @@ export default {
 }
 </script>
 
-<style lang="scss">
-.carousel {
-  &--wrapper {
+<style>
+.carousel--wrapper {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 
-  &--content {
+  .carousel--content {
     width: 900px;
     padding: 15px;
-
-    h1 {
+  }
+    .carousel--content h1 {
       color: #e0e0e0;
       font-size: 160px;
       font-weight: bold;
@@ -129,24 +128,24 @@ export default {
       opacity: 0.75;
     }
 
-    h3 {
+    .carousel--content h3 {
       color: #4ec4d1;
       font-size: 36px;
       margin-bottom: 10px;
       margin-left: 50px;
     }
 
-    p {
+    .carousel--content p {
       width: 70%;
       line-height: 1.5;
       margin-left: 50px;
     }
-  }
+  
 
-  &--slider {
+  .carousel--slider {
     flex: 1;
     padding: 15px;
     height: auto;
   }
-}
+
 </style>

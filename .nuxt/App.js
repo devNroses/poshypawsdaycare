@@ -1,15 +1,11 @@
 import Vue from 'vue'
 
-import {
-  getMatchedComponentsInstances,
-  promisify,
-  globalHandleError
-} from './utils'
-
+import { getMatchedComponentsInstances, getChildrenComponentInstancesUsingFetch, promisify, globalHandleError, urlJoin, sanitizeComponent } from './utils'
+import NuxtError from './components/nuxt-error.vue'
 import NuxtLoading from './components/nuxt-loading.vue'
 import NuxtBuildIndicator from './components/nuxt-build-indicator'
 
-import '../node_modules/@fortawesome/fontawesome-svg-core/styles.css'
+import '../node_modules/@nuxtjs/tailwindcss/lib/files/tailwind.css'
 
 import '../assets/stylesheets/main.scss'
 
@@ -18,11 +14,9 @@ import _f4d1a0b0 from '../layouts/contactUs.vue'
 import _6f6c098b from '../layouts/default.vue'
 import _ac397358 from '../layouts/services.vue'
 
-const layouts = { "_about": _7705a157,"_contactUs": _f4d1a0b0,"_default": _6f6c098b,"_services": _ac397358 }
+const layouts = { "_about": sanitizeComponent(_7705a157),"_contactUs": sanitizeComponent(_f4d1a0b0),"_default": sanitizeComponent(_6f6c098b),"_services": sanitizeComponent(_ac397358) }
 
 export default {
-  head: {"title":"poshypawsapp","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"My pioneering Nuxt.js project"},{"hid":"mobile-web-app-capable","name":"mobile-web-app-capable","content":"yes"},{"hid":"apple-mobile-web-app-title","name":"apple-mobile-web-app-title","content":"poshypawsapp"},{"hid":"author","name":"author","content":"Jon Selby"},{"hid":"theme-color","name":"theme-color","content":"#fff"},{"hid":"og:type","name":"og:type","property":"og:type","content":"website"},{"hid":"og:title","name":"og:title","property":"og:title","content":"poshypawsapp"},{"hid":"og:site_name","name":"og:site_name","property":"og:site_name","content":"poshypawsapp"},{"hid":"og:description","name":"og:description","property":"og:description","content":"My pioneering Nuxt.js project"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"manifest","href":"\u002F_nuxt\u002Fmanifest.106eeb54.json"},{"rel":"shortcut icon","href":"\u002F_nuxt\u002Ficons\u002Ficon_64.46472c.png"},{"rel":"apple-touch-icon","href":"\u002F_nuxt\u002Ficons\u002Ficon_512.46472c.png","sizes":"512x512"}],"style":[],"script":[],"htmlAttrs":{"lang":"en"}},
-
   render (h, props) {
     const loadingEl = h('NuxtLoading', { ref: 'loading' })
 
@@ -64,17 +58,20 @@ export default {
     isOnline: true,
 
     layout: null,
-    layoutName: ''
-  }),
+    layoutName: '',
+
+    nbFetching: 0
+    }),
 
   beforeCreate () {
     Vue.util.defineReactive(this, 'nuxt', this.$options.nuxt)
   },
   created () {
     // Add this.$nuxt in child instances
-    Vue.prototype.$nuxt = this
-    // add to window so we can listen when ready
+    this.$root.$options.$nuxt = this
+
     if (process.client) {
+      // add to window so we can listen when ready
       window.$nuxt = this
 
       this.refreshOnlineStatus()
@@ -88,9 +85,10 @@ export default {
     this.context = this.$options.context
   },
 
-  mounted () {
+  async mounted () {
     this.$loading = this.$refs.loading
   },
+
   watch: {
     'nuxt.err': 'errorChanged'
   },
@@ -98,7 +96,15 @@ export default {
   computed: {
     isOffline () {
       return !this.isOnline
-    }
+    },
+
+    isFetching () {
+      return this.nbFetching > 0
+    },
+
+    isPreview () {
+      return Boolean(this.$options.previewData)
+    },
   },
 
   methods: {
@@ -126,8 +132,17 @@ export default {
       const promises = pages.map((page) => {
         const p = []
 
-        if (page.$options.fetch) {
+        // Old fetch
+        if (page.$options.fetch && page.$options.fetch.length) {
           p.push(promisify(page.$options.fetch, this.context))
+        }
+        if (page.$fetch) {
+          p.push(page.$fetch())
+        } else {
+          // Get all component instance to call $fetch
+          for (const component of getChildrenComponentInstancesUsingFetch(page.$vnode.componentInstance)) {
+            p.push(component.$fetch())
+          }
         }
 
         if (page.$options.asyncData) {
@@ -146,21 +161,30 @@ export default {
       try {
         await Promise.all(promises)
       } catch (error) {
-        this.$loading.fail()
+        this.$loading.fail(error)
         globalHandleError(error)
         this.error(error)
       }
       this.$loading.finish()
     },
-
     errorChanged () {
-      if (this.nuxt.err && this.$loading) {
-        if (this.$loading.fail) {
-          this.$loading.fail()
+      if (this.nuxt.err) {
+        if (this.$loading) {
+          if (this.$loading.fail) {
+            this.$loading.fail(this.nuxt.err)
+          }
+          if (this.$loading.finish) {
+            this.$loading.finish()
+          }
         }
-        if (this.$loading.finish) {
-          this.$loading.finish()
+
+        let errorLayout = (NuxtError.options || NuxtError).layout;
+
+        if (typeof errorLayout === 'function') {
+          errorLayout = errorLayout(this.context)
         }
+
+        this.setLayout(errorLayout)
       }
     },
 
@@ -181,7 +205,7 @@ export default {
         layout = 'default'
       }
       return Promise.resolve(layouts['_' + layout])
-    }
+    },
   },
 
   components: {

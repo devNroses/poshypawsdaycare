@@ -1,0 +1,23 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "/Users/jcs-devnroses/Desktop/Poshy Paws/pages/about/index.vue",
+    "chunkName": "pages/about/index",
+    "_name": "_26ea7b40"
+  },
+  {
+    "name": "contact",
+    "path": "/contact",
+    "component": "/Users/jcs-devnroses/Desktop/Poshy Paws/pages/contact/index.vue",
+    "chunkName": "pages/contact/index",
+    "_name": "_89c36d9a"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/jcs-devnroses/Desktop/Poshy Paws/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_f958ff3c"
+  }
+]
