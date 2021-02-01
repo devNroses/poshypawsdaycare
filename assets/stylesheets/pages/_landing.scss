@@ -1,55 +1,3 @@
-// .navbar {
-//   padding-top: 30px;
-//   background: transparent;
-// }
-// a.navbar-item,
-// .navbar-link {
-//   margin: 0 25px;
-//   color: white;
-//   font-weight: bold;
-
-//   &:hover {
-//     background-color: transparent !important;
-//     color: #4ec4d1 !important;
-//   }
-// }
-// .container {
-//   .logo {
-//     height: auto;
-//     margin-right: 50px;
-//     padding-top: 15px;
-//     width: 166px;
-//   }
-//   .title {
-//     font-size: 65px;
-//     margin-top: -90px;
-//   }
-
-//   .subtitle {
-//     font-size: 35px;
-//   }
-
-//   .hero--description {
-//     line-height: 2;
-//     width: 360px;
-//   }
-// }
-
-// .hero.is-info .title {
-//   color: #4ec4d1;
-// }
-
-// .landing-page {
-//   background-image: url(~assets/img/home--image.jpg);
-//   background-position: center center;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-// }
-
-// .hero.is-info {
-//   background-color: transparent;
-// }
-
 .flexgrid--wrapper {
   display: flex;
   justify-content: flex-start;
@@ -96,32 +44,6 @@
   &--description {
     font-size: 18px;
     width: 450px;
-  }
-}
-
-.header {
-  &--wrapper {
-    padding: 30px;
-  }
-
-  &--nav {
-    display: inline-flex;
-    div {
-      margin: 0 12px;
-    }
-  }
-
-  &--logo {
-    width: 200px;
-    height: auto;
-  }
-
-  &--links {
-    padding-top: 15px;
-
-    a {
-      margin: 0 30px;
-    }
   }
 }
 
